@@ -2,7 +2,7 @@
 import random
 
 # Day 2 of learning Python off the Internet.
-# This is a program written to determine which game you should play today.
+# This is a simple program written to determine which game you should play today.
 # Creates a list of game suggestions based on user input, to be randomized
 suggestions = []
 # Defining the function
@@ -27,13 +27,17 @@ def all_the_games(suggestions):
 # Randomizes index position once satisfied with the amount of games
     if (game3.lower() == "no"):
         print("\nAll right, here's what we have so far.\n" + str(suggestions))
-        print("\nHere's a random game picked from what you've provided.\n")
+        print("\nHere's a random game picked from the choices you've provided.\n")
+        for index, pos in enumerate(suggestions):
+            place = str(index)
         cap = int(len(suggestions))
         print(str(suggestions[random.randint(0, cap)]))
     elif (game3.lower() != "no" or game3.lower() != "yes"):
         print("\nIt's a 'Yes' or 'No' question.\n")
         print("Anyways, here are the games you've added.\n" + str(suggestions))
-        print("\nHere's a random game picked from what you've provided.\n")
+        print("\nHere's a random game picked from the choices you've provided.\n")
+        for index, pos in enumerate(suggestions):
+            place = str(index)
         cap = int(len(suggestions))
         print(str(suggestions[random.randint(0, cap)]))
 
